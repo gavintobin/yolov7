@@ -112,7 +112,7 @@ class RegisterNMS(object):
         # NMS Outputs
         output_num_detections = gs.Variable(
             name="num_dets",
-            dtype=np.int32,
+            dtype=int,
             shape=[self.batch_size, 1],
         )  # A scalar indicating the number of valid detections per batch image.
         output_boxes = gs.Variable(
@@ -127,7 +127,7 @@ class RegisterNMS(object):
         )
         output_labels = gs.Variable(
             name="det_classes",
-            dtype=np.int32,
+            dtype=int,
             shape=[self.batch_size, detections_per_img],
         )
 
